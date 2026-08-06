@@ -18,11 +18,14 @@ ansible-galaxy collection install -r ansible/requirements.yml
 Ejecuta los playbooks en este orden:
 
 ```bash
-ansible-playbook -i localhost, -c local ansible/install-apt-packages.yml -K
+ansible-playbook -i localhost, -c local ansible/configure-passwordless-sudo.yml -K
+ansible-playbook -i localhost, -c local ansible/install-apt-packages.yml
 ansible-playbook -i localhost, -c local ansible/configure-development-tools.yml
-ansible-playbook -i localhost, -c local ansible/configure-docker.yml -K
-ansible-playbook -i localhost, -c local ansible/configure-ssh.yml -K
+ansible-playbook -i localhost, -c local ansible/configure-docker.yml
+ansible-playbook -i localhost, -c local ansible/configure-ssh.yml
 ```
+
+La primera ejecución de `configure-passwordless-sudo.yml` solicita la contraseña actual para crear la regla. Después, `sudo` y los playbooks con privilegios no vuelven a solicitarla.
 
 Antes de ejecutar `configure-ssh.yml`, añade al menos una clave pública con extensión `.pub` a `rsc/authorized_keys/`. El playbook permite SSH solo al usuario que lo ejecuta y solo con esas claves.
 

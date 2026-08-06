@@ -4,6 +4,7 @@ Los playbooks se ejecutan contra la propia distribución Ubuntu de WSL, con `loc
 
 | Archivo | Responsabilidad | Requisitos |
 | --- | --- | --- |
+| [`configure-passwordless-sudo.yml`](configure-passwordless-sudo.yml) | Permite al usuario que ejecuta Ansible usar cualquier comando mediante `sudo` sin contraseña. | Privilegios de `sudo` durante la primera ejecución |
 | [`install-apt-packages.yml`](install-apt-packages.yml) | Actualiza APT e instala el inventario de paquetes. | Privilegios de `sudo` |
 | [`configure-development-tools.yml`](configure-development-tools.yml) | Instala o actualiza `tfenv` e inicializa `pyenv` en Bash. | `git` y `pyenv` instalados |
 | [`configure-docker.yml`](configure-docker.yml) | Habilita Docker y añade al usuario actual al grupo `docker`. | Docker instalado y `systemd` activo |

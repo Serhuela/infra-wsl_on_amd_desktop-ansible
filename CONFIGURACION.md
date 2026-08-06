@@ -8,6 +8,7 @@ Los playbooks de [`ansible/`](ansible/) son la fuente de verdad de estos ajustes
 
 ## Ajustes aplicados
 
+- El usuario que ejecuta Ansible puede ejecutar cualquier comando con `sudo` sin contraseña.
 - APT actualiza los paquetes instalados antes de instalar el inventario definido en el playbook.
 - `pyenv` se inicializa en Bash y `tfenv` se instala en `~/.tfenv`, con un enlace en `~/.local/bin`.
 - Docker se habilita e inicia mediante `systemd`; el usuario que ejecuta Ansible se añade al grupo `docker`.
