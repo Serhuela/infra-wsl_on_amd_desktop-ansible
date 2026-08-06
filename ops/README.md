@@ -7,7 +7,7 @@ Ejecuta estos comandos desde la raíz del repositorio, dentro de la distribució
 Instala Ansible y sus colecciones:
 
 ```bash
-sudo apt update
+sudo apt update && sudo apt upgrade
 sudo apt install ansible
 ansible-galaxy collection install -r ansible/requirements.yml
 ```
