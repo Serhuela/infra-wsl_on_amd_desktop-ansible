@@ -1,0 +1,5 @@
+# Generated Gentle AI registry
+.atl/
+
+# Ansible retry files
+*.retry

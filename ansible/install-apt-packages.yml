@@ -1,0 +1,44 @@
+---
+- name: Instalar paquetes APT locales
+  hosts: localhost
+  connection: local
+  become: true
+
+  vars:
+    apt_packages:
+      - ansible
+      - curl
+      - git
+      - gh
+      - docker.io
+      - docker-buildx
+      - docker-compose-v2
+      - make
+      - openssh-server
+      - build-essential
+      - libssl-dev
+      - zlib1g-dev
+      - libbz2-dev
+      - libreadline-dev
+      - libsqlite3-dev
+      - libncurses-dev
+      - xz-utils
+      - tk-dev
+      - libxml2-dev
+      - libxmlsec1-dev
+      - libffi-dev
+      - liblzma-dev
+      - libzstd-dev
+      - pyenv
+      - zip
+
+  tasks:
+    - name: Actualizar paquetes APT instalados
+      ansible.builtin.apt:
+        update_cache: true
+        upgrade: safe
+
+    - name: Instalar paquetes APT
+      ansible.builtin.apt:
+        name: "{{ apt_packages }}"
+        state: present
