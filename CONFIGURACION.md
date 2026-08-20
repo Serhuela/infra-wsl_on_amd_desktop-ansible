@@ -10,6 +10,6 @@ Los playbooks de [`ansible/`](ansible/) son la fuente de verdad de estos ajustes
 
 - El usuario que ejecuta Ansible puede ejecutar cualquier comando con `sudo` sin contraseña.
 - APT actualiza los paquetes instalados antes de instalar el inventario definido en el playbook.
-- `pyenv` se inicializa en Bash y `tfenv` se instala en `~/.tfenv`, con un enlace en `~/.local/bin`.
+- `pyenv` se inicializa en Bash y `tfenv` se instala en `~/.tfenv`, con un enlace en `~/.local/bin`. Los binarios de `tfenv`, incluido `terraform`, se añaden al `PATH` de Bash.
 - Docker se habilita e inicia mediante `systemd`; el usuario que ejecuta Ansible se añade al grupo `docker`.
 - OpenSSH se habilita e inicia mediante `systemd`. Solo permite al usuario que ejecuta Ansible autenticarse con las claves públicas de [`rsc/authorized_keys/`](rsc/authorized_keys/), y rechaza el acceso de `root`, las contraseñas y la autenticación interactiva.

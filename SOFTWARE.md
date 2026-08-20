@@ -15,6 +15,6 @@ Inventario del software instalado o configurado por los playbooks de este reposi
 
 | Herramienta | Ubicación | Gestión |
 | --- | --- | --- |
-| tfenv | `~/.tfenv` y `~/.local/bin/tfenv` | Clonada y actualizada desde `tfutils/tfenv`, rama `master` |
+| tfenv | `~/.tfenv` y `~/.local/bin/tfenv` | Clonada y actualizada desde `tfutils/tfenv`, rama `master`; sus binarios se añaden al `PATH` de Bash |
 
 `pyenv` se inicializa en `~/.bashrc`. La lista completa y fuente de verdad de los paquetes APT es `ansible/install-apt-packages.yml`.

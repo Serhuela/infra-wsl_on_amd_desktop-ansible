@@ -32,6 +32,14 @@
         force: true
       become: false
 
+    - name: Añadir binarios de tfenv al PATH de Bash
+      ansible.builtin.blockinfile:
+        path: "{{ local_home }}/.bashrc"
+        marker: "# {mark} ANSIBLE MANAGED TFENV"
+        block: |
+          export PATH="$HOME/.tfenv/bin:$PATH"
+      become: false
+
     - name: Inicializar pyenv en Bash
       ansible.builtin.blockinfile:
         path: "{{ local_home }}/.bashrc"
