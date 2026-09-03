@@ -6,7 +6,7 @@ Inventario del software instalado o configurado por los playbooks de este reposi
 
 | Finalidad | Paquetes |
 | --- | --- |
-| Automatización y utilidades | `ansible`, `curl`, `git`, `gh`, `make`, `zip` |
+| Automatización y utilidades | `ansible`, `curl`, `git`, `gh`, `jq`, `make`, `ripgrep`, `zip` |
 | Contenedores | `docker.io`, `docker-buildx`, `docker-compose-v2` |
 | Acceso remoto | `openssh-server` |
 | Python y compilación | `pyenv`, `build-essential`, `libssl-dev`, `zlib1g-dev`, `libbz2-dev`, `libreadline-dev`, `libsqlite3-dev`, `libncurses-dev`, `xz-utils`, `tk-dev`, `libxml2-dev`, `libxmlsec1-dev`, `libffi-dev`, `liblzma-dev`, `libzstd-dev` |

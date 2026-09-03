@@ -13,10 +13,12 @@
       - docker.io
       - docker-buildx
       - docker-compose-v2
+      - jq
       - make
       - openssh-server
       - build-essential
       - pyenv
+      - ripgrep
       - zip
 
   tasks:
