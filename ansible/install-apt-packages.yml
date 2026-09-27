@@ -14,7 +14,9 @@
       - docker.io
       - docker-buildx
       - docker-compose-v2
+      - groovy
       - jq
+      - openjdk-21-jdk
       - make
       - openssh-server
       - build-essential
