@@ -10,6 +10,8 @@ Los playbooks de [`ansible/`](ansible/) son la fuente de verdad de estos ajustes
 
 - El usuario que ejecuta Ansible puede ejecutar cualquier comando con `sudo` sin contraseña.
 - APT actualiza los paquetes instalados antes de instalar el inventario definido en el playbook.
+- Los playbooks de Snap, Docker y OpenSSH comprueban automáticamente que `systemd` es el proceso de inicio antes de modificar la configuración. Si no lo es, se detienen e indican cómo habilitarlo y reiniciar WSL.
+- Snap habilita e inicia `snapd.socket` y `snapd.service` e instala los paquetes definidos en el inventario.
 - `pyenv` se inicializa en Bash y `tfenv` se instala en `~/.tfenv`, con un enlace en `~/.local/bin`. Los binarios de `tfenv`, incluido `terraform`, se añaden al `PATH` de Bash.
 - Docker se habilita e inicia mediante `systemd`; el usuario que ejecuta Ansible se añade al grupo `docker`.
 - OpenSSH se habilita e inicia mediante `systemd`. Solo permite al usuario que ejecuta Ansible autenticarse con las claves públicas de [`rsc/authorized_keys/`](rsc/authorized_keys/), y rechaza el acceso de `root`, las contraseñas y la autenticación interactiva.

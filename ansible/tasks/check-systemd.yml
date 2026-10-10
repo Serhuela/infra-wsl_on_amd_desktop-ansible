@@ -1,0 +1,17 @@
+---
+- name: Leer el proceso de inicio de la distribucion
+  ansible.builtin.slurp:
+    src: /proc/1/comm
+  register: systemd_init_process
+  become: false
+
+- name: Comprobar que systemd esta activo
+  ansible.builtin.assert:
+    that:
+      - (systemd_init_process.content | b64decode | trim) == 'systemd'
+    fail_msg: >-
+      systemd no esta activo como proceso de inicio (PID 1).
+      En WSL, configura systemd=true en la seccion [boot] de /etc/wsl.conf.
+      Despues ejecuta wsl --shutdown desde PowerShell, vuelve a abrir Ubuntu
+      y repite el playbook. El reinicio termina las sesiones WSL abiertas.
+    quiet: true

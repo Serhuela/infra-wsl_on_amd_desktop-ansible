@@ -1,0 +1,34 @@
+---
+- name: Instalar paquetes Snap locales
+  hosts: localhost
+  connection: local
+  become: true
+
+  vars:
+    snap_packages:
+      - bw
+
+  pre_tasks:
+    - name: Verificar systemd antes de configurar Snap
+      ansible.builtin.import_tasks: tasks/check-systemd.yml
+      tags: check_systemd
+
+  tasks:
+    - name: Habilitar e iniciar el socket de snapd
+      ansible.builtin.systemd_service:
+        name: snapd.socket
+        enabled: true
+        state: started
+
+    - name: Habilitar e iniciar snapd
+      ansible.builtin.systemd_service:
+        name: snapd.service
+        enabled: true
+        state: started
+
+    - name: Instalar paquetes Snap
+      community.general.snap:
+        name: "{{ item }}"
+        channel: latest/stable
+        state: present
+      loop: "{{ snap_packages }}"

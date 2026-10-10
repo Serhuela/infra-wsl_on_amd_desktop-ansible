@@ -22,6 +22,7 @@
       - build-essential
       - pyenv
       - ripgrep
+      - snapd
       - zip
 
   tasks:

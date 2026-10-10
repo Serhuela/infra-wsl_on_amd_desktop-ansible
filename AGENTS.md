@@ -1,5 +1,6 @@
 # Instrucciones para agentes
 
+- Prohibido ejecutar Ansible en cualquier modalidad, incluidos `ansible`, `ansible-playbook`, `ansible-galaxy`, modo check y ejecuciones filtradas por etiquetas. Limitarse a editar y revisar los archivos; proporcionar los comandos para que el usuario ejecute los playbooks.
 - Leer `README.md` al empezar para entender el propósito y estructura del repositorio.
 - Cada vez que se modifique un documento, leerlo entero después del cambio antes de responder.
 - Mantener los documentos concisos: evitar duplicar información y quitar secciones que metan ruido.

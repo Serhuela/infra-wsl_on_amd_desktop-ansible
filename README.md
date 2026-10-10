@@ -9,6 +9,6 @@ Este repositorio configura software de desarrollo en una distribución Ubuntu ya
 
 ## Alcance
 
-Los playbooks instalan paquetes APT, configuran `pyenv` y `tfenv`, habilitan Docker y preparan OpenSSH con claves públicas versionadas. El inventario está en [SOFTWARE.md](SOFTWARE.md) y los ajustes reproducibles en [CONFIGURACION.md](CONFIGURACION.md).
+Los playbooks instalan paquetes APT y Snap, configuran `pyenv` y `tfenv`, habilitan Docker y preparan OpenSSH con claves públicas versionadas. El inventario está en [SOFTWARE.md](SOFTWARE.md) y los ajustes reproducibles en [CONFIGURACION.md](CONFIGURACION.md).
 
 Los ajustes personales que no gestiona Ansible se documentan en [CONFIGURACION_MANUAL.md](CONFIGURACION_MANUAL.md).

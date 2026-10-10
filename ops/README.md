@@ -20,6 +20,7 @@ Ejecuta los playbooks en este orden:
 ```bash
 ansible-playbook -i localhost, -c local ansible/configure-passwordless-sudo.yml -K
 ansible-playbook -i localhost, -c local ansible/install-apt-packages.yml
+ansible-playbook -i localhost, -c local ansible/install-snap-packages.yml
 ansible-playbook -i localhost, -c local ansible/configure-development-tools.yml
 ansible-playbook -i localhost, -c local ansible/configure-docker.yml
 ansible-playbook -i localhost, -c local ansible/configure-ssh.yml

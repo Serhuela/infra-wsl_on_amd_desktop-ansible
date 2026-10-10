@@ -8,6 +8,11 @@
     local_user: "{{ lookup('ansible.builtin.env', 'USER') }}"
     ssh_public_key_files: "{{ query('ansible.builtin.fileglob', playbook_dir + '/../rsc/authorized_keys/*.pub') }}"
 
+  pre_tasks:
+    - name: Verificar systemd antes de configurar OpenSSH
+      ansible.builtin.import_tasks: tasks/check-systemd.yml
+      tags: check_systemd
+
   tasks:
     - name: Comprobar que existe al menos una clave publica autorizada
       ansible.builtin.assert:

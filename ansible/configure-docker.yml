@@ -7,6 +7,11 @@
   vars:
     local_user: "{{ lookup('ansible.builtin.env', 'USER') }}"
 
+  pre_tasks:
+    - name: Verificar systemd antes de configurar Docker
+      ansible.builtin.import_tasks: tasks/check-systemd.yml
+      tags: check_systemd
+
   tasks:
     - name: Habilitar e iniciar el servicio Docker
       ansible.builtin.systemd_service:
