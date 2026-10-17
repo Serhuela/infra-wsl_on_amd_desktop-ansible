@@ -10,6 +10,7 @@ Inventario del software instalado o configurado por los playbooks de este reposi
 | Gestión de paquetes Snap | `snapd` |
 | Contenedores | `docker.io`, `docker-buildx`, `docker-compose-v2` |
 | Java y Groovy | `openjdk-21-jdk`, `groovy` |
+| Node.js y gestión de paquetes JavaScript | `nodejs`, `npm` |
 | Acceso remoto | `openssh-server` |
 | Python y compilación | `pyenv`, `build-essential`, `libssl-dev`, `zlib1g-dev`, `libbz2-dev`, `libreadline-dev`, `libsqlite3-dev`, `libncurses-dev`, `xz-utils`, `tk-dev`, `libxml2-dev`, `libxmlsec1-dev`, `libffi-dev`, `liblzma-dev`, `libzstd-dev` |
 

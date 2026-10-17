@@ -18,6 +18,8 @@
       - jq
       - openjdk-21-jdk
       - make
+      - nodejs
+      - npm
       - openssh-server
       - build-essential
       - pyenv
